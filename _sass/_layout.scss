@@ -5,7 +5,7 @@
 .content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 400px);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .left-column {
@@ -15,7 +15,7 @@
   grid-row-end: 5;
   border-bottom: 1px solid var(--carbon);
   border-right: 1px solid var(--carbon);
-  padding: 1em 2em;
+  padding: 1em 2em 0em 2em;
 }
 
 .right-column {
@@ -24,15 +24,19 @@
   grid-row-start: 1;
   grid-row-end: 5;
   border-bottom: 1px solid var(--carbon);
-  padding: var(--spacer-3) 1em 1em 1em;
+  padding: var(--spacer-3) 1.5em 1em 1em;
 }
 
 .container {
-  //max-width: 45rem;
+  max-width: 45rem;
   padding-left: var(--spacer-3);
   padding-right: var(--spacer-3);
   margin-left:  auto;
   margin-right: auto;
+}
+
+.section {
+  margin-bottom: 6em;
 }
 
 .books {
@@ -48,12 +52,84 @@
   }
 }
 
+.book-tag-list {
+  margin: 0;
+  padding: 0;
+
+
+  li {
+    list-style-type: none;
+    font-family: var(--heading-font);
+    font-size: smaller;
+    display: inline;
+  }
+
+  li::after {
+    content: ' • ';
+  }
+
+  li:last-child::after {
+    content: '';
+  }
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.writing-list {
+  border-right: 1px solid var(--carbon);
+}
+
+.writing-list, .project-list {
+  margin: 0;
+  padding: 2em 0;
+
+  li {
+    list-style-type: none;
+    padding: 0.5em 0;
+  }
+
+  small {
+    font-family: var();
+  }
+}
+
+.list-item-description {
+  display: block;
+}
+
 hr {
   margin: 0 -2em 0 -2em;
 }
 
 footer {
-  margin-top: var(--spacer-3);
-  margin-bottom: var(--spacer-3);
+  margin-top: var(--spacer-4);
+  margin-bottom: var(--spacer-4);
   text-align: center;
+
+  p {
+    max-width: 45em;
+  }
+}
+
+.seabird-icon {
+  margin: auto;
+  width: 150px;
+  padding: 1em;
+  transform: scaleX(-1);
+}
+
+.footer-links {
+  list-style-type: none;
+  font-family: var(--header-font);
+  font-style: italic;
+  margin: 0;
+  padding: 0 0 1em 0;
+
+  li {
+    display: inline;
+  }
 }

@@ -7,44 +7,61 @@ title: Home
   <h2>Recent Book Reviews</h2>
   <hr />
 
-  <div class="books">
-    {% assign bookposts = site.posts | where: "type", "book" %}
+  <div class="books section">
+    {% assign bookposts = site.posts | where: "category", "book" %}
     {% for book in bookposts limit:3 %}
       <article class="book">
         <img src="{{ book.image }}" class="" alt="" />
-        <p>{{ book.title }}</p>
+        <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a>
+
+        <ul class="book-tag-list">
+        {% assign taglist = book.tags | sort %}
+        {% for tag in taglist %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+        </ul>
       </article>
     {% endfor %}
   </div>
 </section>
 
-<section>
-  <h2>Writing</h2>
-  <hr />
+<section class="split">
+  <section class="writing">
+    <h2>Writing</h2>
+    <hr />
 
-  <div class="essays">
-    {% assign bookposts = site.posts | where: "type", "essay" %}
-    {% for book in bookposts limit:3 %}
-      <article class="essay">
-          <p>foobar</p>
-      </article>
-    {% endfor %}
-  </div>
+    <div>
+      {% assign writingposts = site.posts | where: "category", "writing" %}
+      <ul class="writing-list">
+        {% for writ in writingposts limit:9 %}
+        <li>
+          <a href="{{ writ.url | relative_url }}">{{ writ.title }}</a>
+          <small class="list-item-description">{{ writ.date | date: "%B %d, %Y" }}</small>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Side Projects</h2>
+    <hr />
+
+    <div>
+      {% assign projectposts = site.posts | where: "category", "project" %}
+      <ul class="project-list">
+        {% for proj in projectposts limit:9 %}
+        <li>
+          <a href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
+          <small class="list-item-description">{{ proj.description }}. {{ proj.date | date: "%B, %Y" }}</small>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 </section>
 
-<section>
-  <h2>Side Projects</h2>
-  <hr />
 
-  <div class="projects">
-    {% assign bookposts = site.posts | where: "type", "project" %}
-    {% for book in bookposts limit:3 %}
-      <article class="project">
-          <p>foobar</p>
-      </article>
-    {% endfor %}
-  </div>
-</section>
 
 <!--
 <div class="posts">

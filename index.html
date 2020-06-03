@@ -8,18 +8,12 @@ title: Home
   <hr />
 
   <div class="books">
-    {% for book in paginator.books %}
-    <article class="book">
-      <h3 class="book-title">
-        <a href="{{ book.url | relative_url }}">
-          {{ book.title }}
-        </a>
-      </h3>
-
-      <time datetime="{{ book.date | date_to_xmlschema }}" class="book-date">{{ book.date | date_to_string }}</time>
-
-      {{ book.content }}
-    </article>
+    {% assign bookposts = site.posts | where: "type", "book" %}
+    {% for book in bookposts limit:3 %}
+      <article class="book">
+        <img src="{{ book.image }}" class="" alt="" />
+        <p>{{ book.title }}</p>
+      </article>
     {% endfor %}
   </div>
 </section>
@@ -27,11 +21,29 @@ title: Home
 <section>
   <h2>Writing</h2>
   <hr />
+
+  <div class="essays">
+    {% assign bookposts = site.posts | where: "type", "essay" %}
+    {% for book in bookposts limit:3 %}
+      <article class="essay">
+          <p>foobar</p>
+      </article>
+    {% endfor %}
+  </div>
 </section>
 
 <section>
   <h2>Side Projects</h2>
   <hr />
+
+  <div class="projects">
+    {% assign bookposts = site.posts | where: "type", "project" %}
+    {% for book in bookposts limit:3 %}
+      <article class="project">
+          <p>foobar</p>
+      </article>
+    {% endfor %}
+  </div>
 </section>
 
 <!--

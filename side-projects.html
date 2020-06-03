@@ -1,0 +1,17 @@
+---
+layout: page
+title: Side Projects
+---
+
+<section class="writing section">
+  {% assign projectposts = site.posts | where: "categories", "projects" %}
+  <ul class="writing-list" style="border: none;">
+    {% for proj in projectposts %}
+    <li><a href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
+      <small class="list-item-description">{{ proj.description }}</small>
+      <small class="list-item-description post-date">
+        <time datetime="{{ proj.date | date_to_xmlschema }}">{{ proj.date | date_to_string }}</time>
+      </small>
+    {% endfor %}
+  </ul>
+</section>

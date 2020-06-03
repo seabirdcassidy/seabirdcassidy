@@ -8,10 +8,10 @@ title: Home
   <hr />
 
   <div class="books section">
-    {% assign bookposts = site.posts | where: "category", "book" %}
+    {% assign bookposts = site.posts | where: "categories", "book" %}
     {% for book in bookposts limit:3 %}
       <article class="book">
-        <img src="{{ book.image }}" class="" alt="" />
+        <img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}" />
         <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a>
 
         <ul class="book-tag-list">
@@ -31,12 +31,14 @@ title: Home
     <hr />
 
     <div>
-      {% assign writingposts = site.posts | where: "category", "writing" %}
+      {% assign writingposts = site.posts | where: "categories", "writing" %}
       <ul class="writing-list">
-        {% for writ in writingposts limit:9 %}
+        {% for writ in writingposts limit:5 %}
         <li>
           <a href="{{ writ.url | relative_url }}">{{ writ.title }}</a>
-          <small class="list-item-description">{{ writ.date | date: "%B %d, %Y" }}</small>
+          <small class="list-item-description post-date">
+            <time datetime="{{ writ.date | date_to_xmlschema }}">{{ writ.date | date_to_string }}</time>
+          </small>
         </li>
         {% endfor %}
       </ul>
@@ -48,52 +50,22 @@ title: Home
     <hr />
 
     <div>
-      {% assign projectposts = site.posts | where: "category", "project" %}
+      {% assign projectposts = site.posts | where: "categories", "projects" %}
       <ul class="project-list">
-        {% for proj in projectposts limit:9 %}
+        {% for proj in projectposts limit:5 %}
         <li>
           {% if proj.external_url %}
             <a href="{{ proj.external_url }}" target="_blank">{{ proj.title }}</a>
           {% else %}
             <a href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
           {% endif %}
-          <small class="list-item-description">{{ proj.description }}. {{ proj.date | date: "%B, %Y" }}</small>
+          <small class="list-item-description">{{ proj.description }}.</small>
+          <small class="list-item-description post-date">
+            <time datetime="{{ proj.date | date_to_xmlschema }}">{{ proj.date | date_to_string }}</time>
+          </small>
         </li>
         {% endfor %}
       </ul>
     </div>
   </section>
 </section>
-
-
-
-<!--
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
--->

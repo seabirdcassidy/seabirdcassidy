@@ -1,0 +1,19 @@
+---
+layout: page
+title: Writing
+---
+
+<section class="writing section">
+  {% assign writingposts = site.posts | where: "categories", "writing" %}
+  <ul class="writing-list" style="border: none;">
+    {% for writ in writingposts %}
+    <li>
+      <a href="{{ writ.url | relative_url }}">{{ writ.title }}</a>
+      <small class="list-item-description">{{ writ.description }}</small>
+      <small class="list-item-description post-date">
+        <time datetime="{{ writ.date | date_to_xmlschema }}">{{ writ.date | date_to_string }}</time>
+      </small>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

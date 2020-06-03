@@ -1,0 +1,26 @@
+---
+layout: page
+title: Recommended Reading
+---
+
+<section class="page-intro">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Amet justo donec enim diam vulputate ut. Ac felis donec et odio pellentesque diam volutpat commodo.
+    Varius duis at consectetur lorem donec. Ultricies mi quis hendrerit dolor magna eget. Suscipit adipiscing
+    bibendum est ultricies. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Id nibh tortor id aliquet.
+    Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Aliquet risus feugiat in ante metus dictum at.
+    Feugiat sed lectus vestibulum mattis ullamcorper. Lectus quam id leo in vitae.</p>
+</section>
+
+<section class="books section">
+  {% assign bookposts = site.posts | where: "collections", "best" %}
+  {% for book in bookposts %}
+    <article class="book"><img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}">
+      <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a><ul class="book-tag-list">
+      {% assign taglist = book.tags | sort %}
+      {% for tag in taglist %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+      </ul></article>
+  {% endfor %}
+</section>

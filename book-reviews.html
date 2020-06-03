@@ -1,0 +1,21 @@
+---
+layout: page
+title: Book Reviews
+---
+
+<section class="books section">
+  {% assign bookposts = site.posts | where: "categories", "book" %}
+  {% for book in bookposts %}
+    <article class="book">
+      <img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}" />
+      <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a>
+
+      <ul class="book-tag-list">
+      {% assign taglist = book.tags | sort %}
+      {% for tag in taglist %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</section>

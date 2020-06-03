@@ -1,0 +1,27 @@
+---
+layout: page
+title: Complete Archives
+---
+
+
+<section class="archives section">
+{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
+{% for yearMonth in postsByYearMonth %}
+  <article class="archive-month">
+    <h2>{{ yearMonth.name }}</h2>
+
+    <ul class="archive-list">
+      {% for post in yearMonth.items %}
+      <li>
+        {% if post.author %}
+          <a href="{{ post.url | relative_url }}">{{ post.title }}, {{ post.author }}, {{ post.year }}</a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% endif %}
+        <small class="list-item-description">{{ post.description }}</small>
+      </li>
+       {% endfor %}
+    </ul>
+  </article>
+{% endfor %}
+</section>

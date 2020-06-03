@@ -3,6 +3,38 @@ layout: default
 title: Home
 ---
 
+<section>
+  <h2>Recent Book Reviews</h2>
+  <hr />
+
+  <div class="books">
+    {% for book in paginator.books %}
+    <article class="book">
+      <h3 class="book-title">
+        <a href="{{ book.url | relative_url }}">
+          {{ book.title }}
+        </a>
+      </h3>
+
+      <time datetime="{{ book.date | date_to_xmlschema }}" class="book-date">{{ book.date | date_to_string }}</time>
+
+      {{ book.content }}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Writing</h2>
+  <hr />
+</section>
+
+<section>
+  <h2>Side Projects</h2>
+  <hr />
+</section>
+
+<!--
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post">
@@ -31,3 +63,4 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+-->

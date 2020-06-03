@@ -3,21 +3,42 @@
 // Super small header above the content for site name and short description.
 
 .masthead {
-  padding-top: var(--spacer);
+  padding-top: var(--spacer-3);
   padding-bottom: var(--spacer);
   margin-bottom: var(--spacer-3);
 }
 
+.masthead-handle {
+  font-family: var(--heading-font);
+}
+
 .masthead-title {
-  margin-bottom: 0;
+  margin-top: 0.125em;
+  font-family: var(--heading-font);
 
   a {
     color: inherit;
     text-decoration: none;
+    font-size: 1.5em;
+  }
+}
+
+.masthead-paragraph {
+  font-family: var(--body-font);
+}
+
+.masthead-links {
+  list-style-type: none;
+  font-family: var(--header-font);
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
   }
 
-  small {
-    font-weight: 400;
-    opacity: .5;
+  li::after {
+    content: " • ";
   }
 }

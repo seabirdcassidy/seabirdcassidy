@@ -2,15 +2,36 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.left-column {
+  border-bottom: 1px solid var(--carbon);
+  border-right: 1px solid var(--carbon);
+  padding: 1em 2em;
+}
+
+.right-column {
+  border-bottom: 1px solid var(--carbon);
+  padding: 1em;
+}
+
 .container {
-  max-width: 45rem;
-  padding-left: var(--spacer-2);
-  padding-right: var(--spacer-2);
+  //max-width: 45rem;
+  padding-left: var(--spacer-3);
+  padding-right: var(--spacer-3);
   margin-left:  auto;
   margin-right: auto;
+}
+
+hr {
+  margin: 0 -2em 0 -2em;
 }
 
 footer {
   margin-top: var(--spacer-3);
   margin-bottom: var(--spacer-3);
+  text-align: center;
 }

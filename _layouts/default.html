@@ -7,7 +7,40 @@
 
     <div class="content">
       <div class="left-column">
-        <header class="masthead">
+
+        {% if page.title == "Home" %}
+          <header class="masthead">
+            <small class="masthead-handle">{{ site.tagline }}</small>
+            <h1 class="masthead-title">
+              <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            </h1>
+            <p class="masthead-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <ul class="masthead-links">
+              <li><a href="{{ 'about' | relative_url }}" class="universal-link">About</a></li>
+              <li> • </li>
+              <li><a href="{{ 'book-reviews' | relative_url }}" class="universal-link">Book Reviews</a></li>
+              <li> • </li>
+              <li><a href="{{ 'writing' | relative_url }}" class="universal-link">Writing</a></li>
+              <li> • </li>
+              <li><a href="{{ 'side-projects' | relative_url }}" class="universal-link">Side Projects</a></li>
+            </ul>
+          </header>
+        {% else %}
+        {% endif %}
+
+        <main>
+          {{ content }}
+        </main>
+      </div>
+      <div class="right-column">
+
+        {% if page.title == "Home" %}
+        {% else %}
+        <header class="masthead-side">
           <small class="masthead-handle">{{ site.tagline }}</small>
           <h1 class="masthead-title">
             <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
@@ -18,21 +51,17 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <ul class="masthead-links">
-            <li><a href="#" class="universal-link">About</a></li>
+            <li><a href="{{ 'about' | relative_url }}" class="universal-link">About</a></li>
             <li> • </li>
-            <li><a href="#" class="universal-link">Book Reviews</a></li>
+            <li><a href="{{ 'book-reviews' | relative_url }}" class="universal-link">Book Reviews</a></li>
             <li> • </li>
-            <li><a href="#" class="universal-link">Writing</a></li>
+            <li><a href="{{ 'writing' | relative_url }}" class="universal-link">Writing</a></li>
             <li> • </li>
-            <li><a href="#" class="universal-link">Side Projects</a></li>
+            <li><a href="{{ 'side-projects' | relative_url }}" class="universal-link">Side Projects</a></li>
           </ul>
         </header>
+        {% endif %}
 
-        <main>
-          {{ content }}
-        </main>
-      </div>
-      <div class="right-column">
         <h4>Currently Reading:</h4>
         <small class="side-title">
           Sakura Obsession, Naoko Abe, 2020
@@ -41,9 +70,9 @@
 
         <h4>Quick Links:</h4>
         <ul class="side-links">
-          <li><a href="#">Reading Stats</a></li>
-          <li><a href="#">Recommended Reading</a></li>
-          <li><a href="#">Complete Archives</a></li>
+          <li><a href="{{ 'reading-stats' | relative_url }}">Reading Stats</a></li>
+          <li><a href="{{ 'recommended-reading' | relative_url }}">Recommended Reading</a></li>
+          <li><a href="{{ 'archives' | relative_url }}">Complete Archives</a></li>
         </ul>
       </div>
     </div>

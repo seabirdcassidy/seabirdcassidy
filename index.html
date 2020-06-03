@@ -52,7 +52,11 @@ title: Home
       <ul class="project-list">
         {% for proj in projectposts limit:9 %}
         <li>
-          <a href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
+          {% if proj.external_url %}
+            <a href="{{ proj.external_url }}" target="_blank">{{ proj.title }}</a>
+          {% else %}
+            <a href="{{ proj.url | relative_url }}">{{ proj.title }}</a>
+          {% endif %}
           <small class="list-item-description">{{ proj.description }}. {{ proj.date | date: "%B, %Y" }}</small>
         </li>
         {% endfor %}

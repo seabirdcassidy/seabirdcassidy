@@ -4,7 +4,7 @@ title: Complete Archives
 ---
 
 
-<section class="archives section">
+<section class="archives section page-intro">
 {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
 {% for yearMonth in postsByYearMonth %}
   <article class="archive-month">

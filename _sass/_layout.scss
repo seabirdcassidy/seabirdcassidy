@@ -31,6 +31,15 @@
       border-right: none;
     }
   }
+
+  .text-wrap-image {
+    float: none;
+    padding: 0;
+  }
+
+  .post p {
+    clear: both;
+  }
 }
 
 .left-column {
@@ -89,6 +98,11 @@
 .medium-book {
   max-height: 100%;
   width: 400px;
+}
+
+.text-wrap-image {
+  float: left;
+  padding: 0 1em 0 1em;
 }
 
 .book-tag-list {

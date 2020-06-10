@@ -6,6 +6,9 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <hr />
   <section class="page-intro">
+    {% if page.image %}
+      <img src="{{ page.image }}" class="medium-book text-wrap-image" alt="Book cover for {{ page.title }}" />
+    {% endif %}
     {{ content }}
   </section>
 

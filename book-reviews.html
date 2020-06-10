@@ -7,7 +7,9 @@ title: Book Reviews
   {% assign bookposts = site.posts | where: "categories", "book" %}
   {% for book in bookposts %}
     <article class="book">
-      <img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}" />
+      <a href="{{ book.url | relative_url }}" alt="go to book review: {{ book.title }}">
+        <img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}" />
+      </a>
       <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a>
 
       <ul class="book-tag-list">

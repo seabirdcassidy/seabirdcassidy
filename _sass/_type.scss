@@ -68,7 +68,8 @@ abbr {
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
-  color: var(--atomic-tangerine);
+  color: var(--body-color);
+  font-style: italic;
 
   p:last-child {
     margin-bottom: 0;

@@ -14,7 +14,7 @@ tags:
 
 I recently finished [Eloquent JavaScript](https://eloquentjavascript.net/) by Marijn Haverbeke. Eloquent JavaScript is considered one of the educational pillars of JavaScript, and I've heard great reviews of it from fellow programmers. So I thought it was worth trying.
 
-# The Book
+## The Book
 
 I did every exercise in the book, and overall, I think Haverbeke provides a good introduction to the language. However, I did not enjoy his teaching style.
 
@@ -22,7 +22,7 @@ I felt that that in the beginning of the book he was more thorough and made a gr
 
 Al Sweigart's teaching style is, in my opinion, more engaging and methodical, with blocks building on blocks and each topic full explored. His tone is silly and fun, and accessible to all audiences. Perhaps he's a more gentle teacher because of the many programming books he's written for children.
 
-# Overall
+## Overall
 
 After the introduction to the fundamentals, the engagement level dropped off for me but I pushed through. I was excited by the projects Haverbeke presented, but the walkthroughs were difficult for me to follow. New terms and explanations were thrown in at a rapid pace, and I found the reasoning and "why" to be more terse. After each project, I felt a bit disappointed that I didn't fully understand how they worked, and disappointed that I couldn't take my knowledge and do something creative myself with it.
 

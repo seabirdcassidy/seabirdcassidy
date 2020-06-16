@@ -62,30 +62,7 @@
         </header>
         {% endif %}
 
-        <h4>Currently Reading:</h4>
-
-        <article class="side-book">
-          <small class="side-title">
-            Sakura Obsession, Naoko Abe, 2020
-          </small>
-          <img src="/assets/images/books/sakura-obsession.jpeg" class="side-book-cover" alt="Book cover for Sakura Obsession" />
-        </article>
-
-        <article class="side-book">
-          <small class="side-title">
-            Principles Of Plant Genetics And Breeding, George Acquaah, 2012
-          </small>
-          <img src="/assets/images/books/principles-of-plant-genetics-and-breeding.jpg" class="side-book-cover" alt="Book cover for Principles Of Plant Genetics And Breeding" />
-        </article>
-
-
-
-        <h4>Quick Links:</h4>
-        <ul class="side-links">
-          <li><a href="{{ 'reading-stats' | relative_url }}">Reading Stats</a></li>
-          <li><a href="{{ 'recommended-reading' | relative_url }}">Recommended Reading</a></li>
-          <li><a href="{{ 'archives' | relative_url }}">Complete Archives</a></li>
-        </ul>
+        {% include sidebar.html %}
       </div>
     </div>
 

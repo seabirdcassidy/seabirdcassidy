@@ -14,13 +14,13 @@ tags:
 
 The [Tao Te Ching](https://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451/ref=sr_1_7?dchild=1&keywords=tao+te+ching&qid=1591827236&sr=8-7) is a book that I keep returning to, especially in times where I feel like I've wondered off the path. Its very short verses are easily digestible, and though poetic, don't hide a lot of meaning. The Tao Te Ching's lessons serve as gentle reminders to let go, be compassionate, give in to serendipity, let yourself and others self-govern. Though Taoism has influenced many schools of thought, notably Zen Buddhism, you could also say that the Tao holds the precursor to anarchism. There is quite a bit of guidance in the way of "hands-off" government and leadership that makes me think of a utopia where individuals follow the Tao and need no ruling.
 
-# On Translations
+## On Translations
 
 Stephen Mitchell's version was good, but I am curious to read other translations. I chose this version first because it was highly recommended. But some of the complaints that I have heard are that it goes beyond translation to "modern interpretation" of the original text. I am curious about the nuances that might have been in the original text and lost by Mitchell's modernization.
 
 I think the lessons contained within Taoism merit more time and contemplation. I will be adding more translations of Tao Te Ching to my reading list. In particular, I added the translated copies from Thomas Cleary, Arthur Waley, Robert Henricks, John C.H. Wu, and D.C. Lau to my list. I suppose the next best thing would be to learn Classical Chinese and try to find a scan of the original document, if such a thing exists in the public sphere. The beautiful thing about this book is that it is very small and concise, which is probably why it's been published in more than 200 different translations.
 
-# The Way
+## The Way
 
 One of my favorite excerpts:
 

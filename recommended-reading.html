@@ -3,24 +3,87 @@ layout: page
 title: Recommended Reading
 ---
 
-<section class="page-intro">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Amet justo donec enim diam vulputate ut. Ac felis donec et odio pellentesque diam volutpat commodo.
-    Varius duis at consectetur lorem donec. Ultricies mi quis hendrerit dolor magna eget. Suscipit adipiscing
-    bibendum est ultricies. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Id nibh tortor id aliquet.
-    Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Aliquet risus feugiat in ante metus dictum at.
-    Feugiat sed lectus vestibulum mattis ullamcorper. Lectus quam id leo in vitae.</p>
+<section class="page-intro section">
+  <p>Occasionally I come across a really good book that's worth recommending. The books in this list have changed my
+  perspective and inspired critical thinking.</p>
 </section>
 
+<h2>Best Of Ecology</h2>
 <section class="books section">
-  {% assign bookposts = site.posts | where: "collections", "best" %}
-  {% for book in bookposts %}
-    <article class="book"><img src="{{ book.image }}" class="medium-book" alt="{{ book.title }}">
-      <a href="{{ book.url | relative_url }}">{{ book.title }}, {{ book.author }}, {{ book.year }}</a><ul class="book-tag-list">
-      {% assign taglist = book.tags | sort %}
-      {% for tag in taglist %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-      </ul></article>
-  {% endfor %}
+  <article class="book">
+    <img src="/assets/images/books/hidden-life-of-trees.jpg" class="medium-book" alt="The book cover of Hidden Life Of Trees, by Peter Wohlleben">
+    The Hidden Life Of Trees, Peter Wohlleben, 2016
+    <ul class="book-tag-list">
+      <li>botany</li>
+      <li>ecology</li>
+      <li>forestry</li>
+    </ul>
+  </article>
+  <article class="book">
+    <img src="/assets/images/books/mycelium-running.jpg" class="medium-book" alt="The book cover of Mycelium Running, by Paul Stamets">
+    Mycelium Running, Paul Stamets, 2005
+    <ul class="book-tag-list">
+      <li>botany</li>
+      <li>ecology</li>
+      <li>forestry</li>
+    </ul>
+  </article>
+  <article class="book">
+    <img src="/assets/images/books/salmon.jpg" class="medium-book" alt="The book cover of Salmon, by Mark Kurlansky">
+    <a href="{{ '/posts/2020-06-15-salmon.md' | relative_url }}">Salmon, Mark Kurlansky, 2020</a>
+    <ul class="book-tag-list">
+      <li>ecology</li>
+      <li>biology</li>
+      <li>food history</li>
+    </ul>
+  </article>
+</section>
+
+<h2>Best Of Science Fiction</h2>
+<section class="books section">
+  <article class="book">
+    <img src="/assets/images/books/do-androids-dream-of-electric-sheep.jpg" class="medium-book"
+    alt="The book cover of Do Androids Dream Of Electric Sheep, by Philip K. Dick">
+    Do Androids Dream Of Electric Sheep? Philip K. Dick, 1968
+    <ul class="book-tag-list">
+      <li>science fiction</li>
+      <li>dystopia</li>
+      <li>artificial intelligence</li>
+    </ul>
+  </article>
+  <article class="book">
+    <img src="/assets/images/books/snow-crash.jpg" class="medium-book" alt="The book cover of
+    Snow Crash, by Neal Stephenson">
+    Snow Crash, Neal Stephenson, 1992
+    <ul class="book-tag-list">
+      <li>science fiction</li>
+      <li>cyberpunk</li>
+      <li>computer science</li>
+    </ul>
+  </article>
+</section>
+
+<h2>Best Of Politics</h2>
+<section class="books section">
+  <article class="book">
+    <img src="/assets/images/books/1984.jpg" class="medium-book" alt="The book cover of
+    1984, by George Orwell">
+    1984, George Orwell, 1949
+    <ul class="book-tag-list">
+      <li>dystopia</li>
+      <li>political fiction</li>
+      <li>science fiction</li>
+    </ul>
+  </article>
+  <article class="book">
+    <img src="/assets/images/books/communist-manifesto.jpg" class="medium-book" alt="The book cover of
+    The Communist Manifesto, by Karl Marx and Friedrich Engels">
+    The Communist Manifesto, Karl Marx and Friedrich Engels, 1848
+    <ul class="book-tag-list">
+      <li>politics</li>
+      <li>philosophy</li>
+      <li>communism</li>
+      <li>capitalism</li>
+    </ul>
+  </article>
 </section>

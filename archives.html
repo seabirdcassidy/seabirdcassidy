@@ -16,7 +16,11 @@ title: Complete Archives
         {% if post.author %}
           <a href="{{ post.url | relative_url }}">{{ post.title }}, {{ post.author }}, {{ post.year }}</a>
         {% else %}
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.external_url %}
+            <a href="{{ post.external_url }}" target="_blank">{{ post.title }}</a>
+          {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% endif %}
         {% endif %}
         <small class="list-item-description">{{ post.description }}</small>
       </li>
